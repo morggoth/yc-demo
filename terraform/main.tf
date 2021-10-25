@@ -1,4 +1,6 @@
 terraform {
+  required_version = "v1.0.8"
+
   required_providers {
     yandex = {
       source  = "yandex-cloud/yandex"

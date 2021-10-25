@@ -61,4 +61,4 @@ tags
 # End of https://www.toptal.com/developers/gitignore/api/terraform,vim
 
 # Custom rules
-files/yc_demo
+terraform/files/yc_demo

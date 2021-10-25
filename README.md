@@ -11,6 +11,7 @@ Prerequisites:
 ```bash
 cd terraform
 export YC_TOKEN=`yc iam create-token`
+terraform init 
 terraform plan
 terraform apply
 ```
