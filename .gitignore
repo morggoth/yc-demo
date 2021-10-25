@@ -62,3 +62,4 @@ tags
 
 # Custom rules
 terraform/files/yc_demo
+.idea
