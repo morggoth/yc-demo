@@ -1,0 +1,15 @@
+---
+# playbook.yml
+- name: 'Provision Image'
+  hosts: default
+  become: true
+
+  tasks:
+    - name: wait for CloudInit update
+      wait_for:
+        path: /var/lib/dpkg/lock-frontend
+
+    - name: install Apache
+      package:
+        name: 'apache2'
+        state: present
