@@ -64,3 +64,4 @@ tags
 terraform/files/yc_demo
 .idea
 packer/secret.pkrvars.hcl
+artifact/
