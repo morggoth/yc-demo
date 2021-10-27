@@ -29,3 +29,7 @@ output "vm_external_addresses" {
 output "vm_fqdns" {
   value = module.vms.vm_fqdn
 }
+
+output "connection_string" {
+  value = [for ip in module.vms.vm_external_address: "ssh ${local.ssh_username}@${ip} -i ${abspath(path.module)}/files/yc_demo.pub"]
+}

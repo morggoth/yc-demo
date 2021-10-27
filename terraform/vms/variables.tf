@@ -29,14 +29,18 @@ variable "subnet_id" {
 }
 
 // Image variables
-variable "image_family" {
-  type    = string
-  default = "ubuntu-2004-lts"
-}
+#variable "image_family" {
+#  type    = string
+#  default = "ubuntu-2004-lts"
+#}
+#
+#variable "image_folder" {
+#  type    = string
+#  default = "standard-images"
+#}
 
-variable "image_folder" {
-  type    = string
-  default = "standard-images"
+variable "image_id" {
+  type = string
 }
 
 variable "labels" {
@@ -55,6 +59,6 @@ variable "vm_user" {
 }
 
 variable "vm_nat" {
-  type = bool
+  type    = bool
   default = true
 }

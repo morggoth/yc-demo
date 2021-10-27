@@ -63,3 +63,5 @@ tags
 # Custom rules
 terraform/files/yc_demo
 .idea
+packer/secret.pkrvars.hcl
+artifact/
