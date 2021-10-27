@@ -12,10 +12,10 @@ locals {
   vm_name = "demo"
 }
 
-data "yandex_compute_image" "ubuntu" {
-  family    = var.image_family
-  folder_id = var.image_folder
-}
+#data "yandex_compute_image" "ubuntu" {
+#  family    = var.image_family
+#  folder_id = var.image_folder
+#}
 
 resource "yandex_compute_instance" "demo" {
   count = var.vms_count
@@ -24,12 +24,12 @@ resource "yandex_compute_instance" "demo" {
 
   boot_disk {
     initialize_params {
-      image_id = data.yandex_compute_image.ubuntu.image_id
+      image_id = var.image_id
     }
   }
   network_interface {
     subnet_id = var.subnet_id
-    nat = var.vm_nat
+    nat       = var.vm_nat
   }
   resources {
     cores  = var.vm_cores
