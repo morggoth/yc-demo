@@ -15,3 +15,11 @@ variable "artifact_dir" {
   type        = string
   description = "A directory for a manifest file"
 }
+
+variable "image_name" {
+  type = string
+}
+
+variable "image_family" {
+  type = string
+}
